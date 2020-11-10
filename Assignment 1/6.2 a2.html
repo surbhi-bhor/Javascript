@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+     <h1>Assignment 2</h1>
+     
+
+
+    <input type="button" onclick="validate()" value="validate">
+    
+    <script>
+      function validate(){
+      for(var i=0; i<3; i++){
+        var input = prompt("Enter the number", "Enter any number");
+        if(input >=1 && input <=30){
+           
+          document.write("Input: "+input);
+          document.write("<br>");
+          document.write("*".repeat(input));
+          document.write("<br>");
+        }
+        else{
+          
+          document.write("Invalid Input");
+          document.write("<br>");
+        }
+      }
+    }
+    </script>
+ 
+    
+</body>
+</html>

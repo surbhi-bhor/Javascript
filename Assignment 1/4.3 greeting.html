@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting msg</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+        button {
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greeting msg</h1>
+    <input id="text" placeholder="Name">
+    <br>
+    <button onclick="greeting()" id="btn">Greet</button>
+    <p id="demo"></p>
+
+    <script>
+        function greeting(){
+            var str = document.getElementById("text").value;
+             if (str== "Alice" || str =="Bob") {
+                document.getElementById("demo").innerHTML = "Hello " +str+ " have a good day";
+        }
+        
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle area</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 170);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rectangle area</h1>
+    <p id="demo1"></p>
+    <p id="demo"></p>
+
+    <script>
+        function Rectangle(width, height) {
+                this.width = width;
+                this.height = height;
+            
+        }
+        Rectangle.prototype.getArea = function () {
+          return (this.width * this.height);
+}
+
+        rect = new Rectangle(30,50);
+         rect1 = new Rectangle(30,50);
+         rect2 = new Rectangle(35,55);
+
+        console.log(rect.getArea());
+
+        document.getElementById("demo1").innerHTML =
+         "Height of rectangle is: " +rect1.height +
+         "<br> Width of rectangle is: " + rect1.width +
+         "<br><br>Height of rectangle is: " +rect2.height +
+         "<br> Width of rectangle is: " + rect2.width;
+        document.getElementById("demo").innerHTML =  `Area of rectangle is ${rect.getArea()}`;
+         
+         
+
+
+
+        
+
+    </script>
+</body>
+</html>

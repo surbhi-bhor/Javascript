@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum-product</title>
+    <style>
+      body{
+          background-color: rgb(209, 204, 197);
+          text-align: center;
+      }
+  </style>
+</head>
+<body>
+    <h1>Sum-product</h1>
+   <p id="demo"></p>
+    <script>
+        var num = prompt("Enter the number: ");
+var choice = prompt("Enter the choice: sum/pro");
+if(choice==="sum"){
+  //sum
+  var sum = 0;
+  for(var i=1; i<=num; i++){
+    sum += i;
+  }
+  document.getElementById("demo").innerHTML=
+    "Total sum is: "+sum;
+}
+else if(choice==="pro"){
+  //product
+  var product = 1;
+  for(var i=1; i<=num; i++){
+    product *= i;
+  }
+  document.getElementById("demo").innerHTML=
+    "Total product is: "+product;
+}
+else{
+  document.getElementById("demo").innerHTML=
+    "Invalid choice";
+}
+    </script>
+</body>
+</html>

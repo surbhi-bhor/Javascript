@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaradhya (Abhishek-Amitabh)</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 170);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aaradhya (Abhishek-Amitabh) </h1>
+    <p id="person1"></p>
+
+    <script>
+         var address = function (city, pincode){
+            this.city = city;
+            this.pincode = pincode
+        }
+
+    function person (fname, lname, age, skills, dateofbirth, address, married, profession){
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.skills = skills;
+        this.dateofbirth = dateofbirth;
+        this.address = address;
+        this.married = married;
+        this.profession = profession
+    }
+
+    amitabh = new person("amitabh", "bachan", 22, ["c"], "24/10/1996",{city: "hyderabad", pincode:"521185"}, "false","sr analyst");
+    abhishek = new person("abhishek", 21, "HTML", "08/06/1997", "false","jr analyst");
+    Aaradhya = new person("aaradhya", 18, "09/11/2000");
+     var abhishek = Object.create(amitabh);
+     var Aaradhya = Object.create(abhishek);
+   
+    print=function() 
+    {
+        
+        
+        console.log(Aaradhya.lname);
+        console.log(Aaradhya.address);
+        console.log(Aaradhya.skills);
+       
+
+    }();
+  
+    </script>
+</body>
+</html>

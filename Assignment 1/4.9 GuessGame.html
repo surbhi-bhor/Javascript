@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <h1>Guess The Number</h1>
+    <h3>How to play?</h3>
+    <p>
+        A random number between 1 and 100 will be selected <br>
+        10 turns to guess it right.
+        
+    </p>
+
+    <button type="button" id="start" class="start-btn" onclick="start()">Start</button>
+    <button type="button" id="reset" class="reset-btn" onclick="window.location.reload()">Reload</button>
+
+    <div id="main-div" class="main-div">
+        Enter the guess -> <input type="text" id="guess-box" class="guess-box">
+        <button type="button" id="check" class="check-btn" onclick="checkGuess()">Check</button>
+
+        <div id="all-guesses">Your Guess: </div>
+        <div id="high-or-low" class=""></div>
+    </div>
+
+    <script>
+        var btn_start = document.getElementById("start");
+var btn_reset = document.getElementById("reset");
+var btn_check = document.getElementById("check");
+
+var main_div = document.getElementById("main-div");
+var guess_box = document.getElementById("guess-box");
+var all_guesses = document.getElementById("all-guesses");
+var high_or_low = document.getElementById("high-or-low");
+
+var random_num = Math.floor(Math.random()*100) + 1;
+
+var count_guess = 1;
+
+
+
+function checkGuess(){
+    var your_guess= Number(guess_box.value);
+    if(count_guess <=10) {
+        if(your_guess < random_num) {
+            all_guesses.textContent += your_guess + " ";
+            high_or_low.textContent = "Your guess is low number";
+            count_guess++;
+            guess_box.value="";
+
+        }
+        else if( your_guess > random_num) {
+            all_guesses.textContent += your_guess + " ";
+            high_or_low.textContent = "Your guess is High number";
+            count_guess++;
+            guess_box.value="";
+        }
+        else{
+            all_guesses.textContent += your_guess + " ";
+            high_or_low.textContent = "Your guess is correct";
+            guess_box.value="";
+            gameOver();
+        }
+    }
+    else{
+        all_guesses.textContent += your_guess + " ";
+        high_or_low.textContent = "Chances over";
+        guess_box.value="";
+        gameOver();
+    }
+}
+
+function gameOver(){
+    btn_check.disabled = true;
+    guess_box.disabled = true;
+}
+    </script>
+
+</body>
+</html>

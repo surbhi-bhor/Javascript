@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Roll Dice</h1>
+
+    <p id="demo"></p>
+    <script>
+         function rollDice(){
+               var counter =0;
+               while(x!==6)
+               {
+                   var x= Math.ceil(Math.random()*6);
+                   counter++;
+               }
+               return counter;
+           }
+        //    document.write(rollDice());
+           document.getElementById("demo").innerHTML = rollDice();
+           
+    
+    </script> 
+</body>
+</html>

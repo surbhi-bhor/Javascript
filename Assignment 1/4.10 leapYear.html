@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    <h1>Leap Year</h1>
+    <p id="demo"></p>
+
+    <script>
+       var year = prompt("please input a year to find out the next 20 years");
+var counter = 20;
+var result=true;
+
+
+    while (counter >= 0) {
+
+        if ((year % 4 == 0) && (year % 100 != 0)||(year % 400 == 0)) {
+            result = true;
+            document.getElementById("demo").innerHTML += year +", ";
+            year++;
+            counter--;
+        } 
+        else {
+        year++;
+        }    
+    }
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element occurence</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Element occurence</h1>
+    <p id="demo"></p>
+
+    <script>
+        var array = [12, 5, 8, 3, 17];
+
+       var el = 9; //Element to be searched
+       var flag = 0;  // Initially 0 - Not found
+
+       for(var i=0; i<array.length; i++) {
+	   if(el == array[i])
+		flag = 1;
+        }
+
+//Check if flag value changed.
+       if(flag == 1)
+       document.getElementById("demo").innerHTML= 'Element Found';
+     else
+     document.getElementById("demo").innerHTML='Element Not Found';
+
+    </script>
+</body>
+</html>

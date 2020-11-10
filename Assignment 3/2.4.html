@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 170);
+            text-align: center;
+        }
+    </style>
+</head>
+
+    <body>
+          <h1>Bank Account</h1>
+   <p id="demo"></p>
+      <script>
+          var Savings= function (accountNumber,accountHolderName,accountBalance, isSalary){
+              this.accountNumber= accountNumber;
+              this.accountHolderName= accountHolderName;
+              this.accountBalance =accountBalance;
+              this.isSalary= isSalary;
+          }
+        Savings.prototype.withdraw= function(amount){
+            newSavingBalance= this.accountBalance - amount;
+            console.log("Your new balance is " +newSavingBalance);
+            if(newSavingBalance <= 0){
+                console.log("You have insufficient funds!");
+            }
+        }
+        var Roy = new Savings(101,"Roy", 10000,6000);
+        Roy.withdraw(5000);
+        console.log(Roy)
+
+              var Current= function(accountNumber,accountHolderName,accountBalance, odLimit){
+              this.accountNumber= accountNumber;
+              this.accountHolderName= accountHolderName;
+              this.accountBalance =accountBalance;
+              this.odLimit= odLimit;
+              }
+              Current.prototype.withdraw= function(amount){
+            newCurrentBalance= this.accountBalance - amount;
+            console.log("Your new balance is " +newCurrentBalance);
+            if(newCurrentBalance <= 0){
+                console.log("You have insufficient funds!");
+            }
+        }
+        var Joy = new Savings(102,"Joy", 15000,7000);
+        Joy.withdraw(15000);
+        console.log(Joy)
+      </script>  
+    </body>
+</html>

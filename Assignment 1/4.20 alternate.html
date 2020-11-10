@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternate</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alternate</h1>
+    <p id="demo"></p>
+
+    <script>
+        function newList(alph, num) {
+        var list = [];
+       for (var i=0;i<alph.length;++i) {
+        list.push(alph[i]);
+        list.push(num[i]);
+         }
+        return list;
+}
+document.getElementById("demo").innerHTML = newList(['a','b','c'],[1,2,3]);
+console.log(newList(['a','b','c'],[1,2,3]));
+    </script>
+</body>
+</html>

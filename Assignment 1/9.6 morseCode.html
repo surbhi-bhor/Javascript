@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+        input {
+            width: 50%;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+        }
+        button:hover {
+            background-color: rgb(156, 166, 167);
+        }
+    </style>
+</head>
+<body>
+    <h1>Morse Code</h1>
+    Enter text you want to convert <br>
+    <input type="text" id="textToConvert"> <br>
+    <button onclick="convert()">Convert</button>
+    <p>Text in Morse Code: </p>
+    <p id="newText"></p>
+    <script>
+        function convert(){
+            var letters = [ ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' ];
+            var morseLetters = [ "\xa0\xa0\xa0\xa0", ". ___", "___ . . .", "___ . ___ .", "___ . .", ".", ". . ___ .", "___ ___ .", ". . . .", ". .", ". ___ ___ ___", "___ . ___", ". ___ . .",  "___ ___", "___ .", "___ ___ ___", ". ___ ___ .", "___ ___ . ___", ". ___ .", ". . .", "_", ". . ___", ". . . ___", ". ___ ___", "___ . . ___", "___ . ___ ___", "___ ___ . .", ". ___ ___ ___ ___", ". . ___ ___ ___", ". . . ___ ___", ". . . . ___", ". . . . .", "___ . . . .", "___ ___ . . .", "___ ___ ___ . .", "___ ___ ___ ___ .", "___ ___ ___ ___ ___" ];
+            
+            var textToChange = document.getElementById("textToConvert").value;
+            var newText = "";
+            for (var i = 0; i < textToChange.length; i++) {
+                for (var j = 0; j < 37; j++) {
+                    if (textToChange[i].toLowerCase() == letters[j]) {
+                        newText += morseLetters[j];
+                        newText += "\xa0\xa0\xa0";
+                        break;
+                    }        
+                }
+            }
+        document.getElementById("newText").innerHTML = newText;
+        }
+    </script>
+    
+</body>
+</html>
+

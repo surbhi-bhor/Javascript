@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split number</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Split number</h1>
+    <p id="demo"></p>
+
+    <script>
+        var num = 2342;
+       var digits = [];
+        while (num > 0) {
+        digits.push(num % 10);
+        num = parseInt(num / 10);
+        }
+
+       digits.reverse();
+       document.getElementById("demo").innerHTML = digits;
+    //   console.log(digits);
+    </script>
+</body>
+</html>

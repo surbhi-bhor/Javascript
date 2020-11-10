@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest element</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Largest element</h1>
+    <p id="demo"></p>
+    <script>
+        const inputArray = [ 1, 3, 4, 9, 16, 2, 20, 18];
+        const maxNumber = Math.max(...inputArray);
+        console.log(maxNumber);
+        document.getElementById("demo").innerHTML= "Largest element is " +maxNumber;
+    </script>
+</body>
+</html>

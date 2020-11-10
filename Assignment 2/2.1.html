@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parity using recursion</title>
+    <style>
+        body{
+            background-color: rgb(168, 168, 117);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parity using recursion</h1>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+
+
+    <script>
+
+          function isEven(num) {
+            return (num%2 == 0);
+        }
+
+        var x=0;
+        function find( a, isEven){
+            if(x < a.length) {
+                if(isEven(a[x]))  {
+                    return a[x];
+                }
+                else {
+                    ++x;
+                    return find(a, isEven);
+                }
+            }
+        }
+
+    var a = [1,3,5,4,2];
+        document.getElementById("result1").innerHTML = "Is 3  even number : <br> " +isEven(3);
+        document.getElementById("result2").innerHTML = "Is 4  even number : <br> "  +isEven(4);
+        document.getElementById("result3").innerHTML = "The 1st even number in the array : <br> " +find(a, isEven);
+
+    
+    </script>
+</body>
+</html>
+

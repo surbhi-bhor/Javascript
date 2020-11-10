@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Creation</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+            
+        }
+        input {
+            margin: 20px;
+            padding: 10px;
+
+        }
+        input:hover {
+            background-color: rgb(221, 176, 176);
+        }
+        table {
+            border-collapse: collapse;
+            border-color: rgb(221, 129, 17);
+            margin-left: auto;
+         margin-right: auto;
+    
+        }
+
+    </style>
+    <script type="text/javascript">
+        function createTable()
+        {
+            var num_rows = prompt("Enter number of rows");
+            var num_cols = prompt("Enter number of columns");
+            
+            var theader = '<table border="1">\n';
+            var tbody = '';
+           
+            for( var i=0; i<num_rows;i++)
+            {
+                tbody += '<tr>';
+                for( var j=0; j<num_cols;j++)
+                {
+                    tbody += '<td>';
+                    tbody += 'Cell ' + i + ',' + j;
+                    tbody += '</td>'
+                }
+                tbody += '</tr>\n';
+            }
+            var tfooter = '</table>';
+            document.getElementById('demo').innerHTML = theader + tbody + tfooter;
+        }
+        </script>
+</head>
+<body >
+    <form name="tablegen">
+        
+        <input name="generate" type="button" value="Create Table!" onclick='createTable();'/>
+        </form>
+        
+        <div id="demo"></div>
+ 
+</body>
+</html> 
+
+
+
+
+
+

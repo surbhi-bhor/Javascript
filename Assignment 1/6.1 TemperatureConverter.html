@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <style>
+        body{
+            display:  flex;
+            justify-content: center;
+            background-color: rgb(209, 204, 197);
+        }
+        #fd, #cd, button {
+            text-align: center;
+            margin: 10px;
+            display: block;
+            width: 300px;
+        }
+        button:hover {
+            transition: 0.5s;
+            background-color: rgb(124, 122, 119);
+        }
+    </style>
+</head>
+<body>
+    <section>
+       
+        <h1> Fahrenheit to celsius conversion(°C to °F)<h1>
+        
+        <div>
+          <br>
+          
+          <input type="text" name="" placeholder="Enter Farenheit Degree" 
+          id="fd" > 
+          <button type="submit" onclick="changeDeg()"> Show results </button>
+          <input type="text" name="" placeholder="Degree in Celcius"
+          id="cd" >
+        
+        </div>
+        </section>
+        
+        <script> 
+
+  function changeDeg() {
+      var Fahrenheit= document.getElementById('fd').value;
+      var celsius = (Fahrenheit - 32) /1.8;
+      document.getElementById('cd').value = celsius+" degree Celsius";
+      if(isNaN(Fahrenheit)){
+          alert ("Enter a number");
+      }
+      if (Fahrenheit == "") {
+        alert("Please Mention the temperature");
+        return false;
+    }
+    return true;
+      
+  }
+  
+   
+        </script>
+        </body>
+        </html>
+</body>
+</html>

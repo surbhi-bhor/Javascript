@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 170);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rectangle</h1>
+    <p id="demo"></p>
+
+    <script>
+        function Rectangle (width, height) {
+                this.width = width;
+                this.height = height;
+            }
+        
+        rect1 = new Rectangle(30,50);
+        rect2 = new Rectangle(35,55);
+        document.getElementById("demo").innerHTML =
+         "Height of rectangle is: " +rect1.height +
+         "<br> Width of rectangle is: " + rect1.width +
+         "<br><br>Height of rectangle is: " +rect2.height +
+         "<br> Width of rectangle is: " + rect2.width;
+
+        
+
+    </script>
+</body>
+</html>

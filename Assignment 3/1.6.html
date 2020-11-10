@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 170);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eval</h1>
+    <p id="demo"></p>
+
+    <script>
+       var fname = "raj";
+      var lname = "sharma";
+      var obj = eval("fullName = fname +' ' +lname");
+      
+      console.log(obj);
+      
+      document.getElementById("demo").innerHTML =  `Person's full name: ${obj}`;
+
+    </script>
+</body>
+</html>

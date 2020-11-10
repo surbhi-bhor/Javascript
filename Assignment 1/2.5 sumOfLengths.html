@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of length of words</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum of length of words</h1>
+
+    <p id="para"></p>
+    <script>
+      var arr = ["stop", "quit", "exit"];
+      var count = 0;
+      var newArr = arr.map(check);
+      function check(str){
+        if(!str.includes("q")){
+          count += str.length;
+          return str;
+        }
+      }
+      // document.write(count);
+      document.getElementById("para").innerHTML = count;
+    </script>
+
+</body>
+</html>

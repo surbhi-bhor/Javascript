@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Squares</title>
+    <style>
+      body{
+          background-color: rgb(209, 204, 197);
+          text-align: center;
+          
+      }
+  </style>
+</head>
+<body>
+   <h1>Perfect Squares</h1>
+    
+    
+    <script>
+     
+      function perfectSquare(){
+      for(var i=1; i<=400; i++){
+        var temp = parseInt(Math.sqrt(i));
+        if(Math.sqrt(i) === temp){
+   
+          document.write(i+"*"+i+" = "+i*i);
+          document.write("<br>");
+        }
+      }
+    }
+    perfectSquare();
+   
+   
+    </script>
+</body>
+</html>

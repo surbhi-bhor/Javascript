@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enter a string:</h1>
+    <input type="text" id="og"> <br>
+    <h1>Palindrome result:</h1>
+    <input type="text"  id="rev"> <br>
+    <input type="submit" onclick="pal()">
+
+    <script>
+        function pal(){
+            var x=document.getElementById("og").value;
+            var y="";
+
+            for(i=x.length-1; i>=0; i--)
+            {
+                y += x[i];
+            }
+            if(x==y){
+                document.getElementById("rev").value=y+ " is a palindrome ";
+            }
+            else{
+                document.getElementById("rev").value=y+ " is not a palindrome ";
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

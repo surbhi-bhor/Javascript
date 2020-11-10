@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose</title>
+    <style>
+        body{
+            background-color: rgb(168, 168, 117);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compose</h1>
+    <p id="result1"></p>
+    <p id="result2"></p>
+
+    <script>
+        function square(x) {
+            return x*x;
+        }
+
+        function double(x) {
+            return x*2;
+        }
+
+        
+
+        function compose(f1, f2) {
+            function f3(value) {
+            return f1(f2(value));
+        }
+            return f3;
+        }
+        var f1 = compose(square, double);
+        var f2 = compose(double, square);
+
+        document.getElementById("result1").innerHTML = "f1(5) -> " +f1(5);
+        document.getElementById("result2").innerHTML = "f2(5) -> " +f2(5);
+    </script>
+</body>
+</html>

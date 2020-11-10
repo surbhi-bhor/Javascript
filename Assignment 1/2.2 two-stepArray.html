@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two step Array</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Two step Array Allocation</h1>
+
+    <p id="demo"></p>
+    <script>
+         var hundredNum = new Array();
+           for(i=0 ;i<=100-1;i++)
+           {
+               hundredNum[i]=Math.random();
+           }
+           
+        document.getElementById("demo").innerHTML = hundredNum ;
+    </script> 
+</body>
+</html>

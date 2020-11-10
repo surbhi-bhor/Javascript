@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Rotate</h1>
+    <p id="demo"></p>
+
+    <script>
+        var arr = [1,2,3,4,5,6];
+var x = prompt("Enter the number of rotation: ");
+
+function rotateList(arr,x){
+  var len = arr.length;
+  for(var i=0; i<x; i++){
+    rotate(arr,len);
+  }
+  return "The array is : "+arr;
+}
+
+function rotate(a,len){
+  var temp = a[0];
+  for(var i=0; i<len-1; i++){
+    a[i] = a[i+1];
+  }
+  a[i] = temp;
+}
+document.getElementById('demo').innerHTML = rotateList(arr,x);
+
+    </script>
+    
+</body>
+</html>

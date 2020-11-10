@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square and Square Root</title>
+    <style>
+        body{
+            background-color: rgb(168, 168, 117);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Square and Square Root using recursion</h1>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    
+
+
+    <script>
+        
+        var l=0;
+        var len=0;
+
+
+        function map(a, square){
+            if(l < a.length) {
+                b.push(square(a[l]));
+                ++l;
+                return map(a,square);
+            }
+            else {
+                return b;
+            }
+        }
+        
+        function square(x){
+            return x*x;
+        }
+        function map1(c, Root) {
+            if(len <c.length) {
+                d.push(squareRoot(c[len]));
+                ++len;
+                return map1(c, squareRoot)
+            }
+            else {
+                return d;
+            }
+        }
+        
+        function squareRoot(x){
+            return (Math.sqrt(x));
+        }
+
+        var a = [1,2,3,4,5];
+        var b = new Array();
+
+        var c=[1,4,9,16,25];
+        var d = new Array();
+
+
+       
+           
+      
+        document.getElementById("result1").innerHTML = "Square of array : <br> " +map(a, square);
+        document.getElementById("result2").innerHTML = "Square root of array : <br> " +map1(c, squareRoot);
+        
+    </script>
+</body>
+</html>

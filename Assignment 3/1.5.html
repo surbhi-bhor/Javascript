@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middlename</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 170);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <h1>Middlename</h1>
+     <p id="demo"></p>
+
+    <script>
+         function Person(fname, lname){
+        this.fname=fname;
+        this.lname=lname;
+      }
+
+      var raj = new Person("raj", "sharma");
+
+      raj.mname = "jay"
+      print = function(){
+        console.log(raj.fname);
+        console.log(raj.lname);
+        console.log(raj.mname);
+      }();
+      document.getElementById("demo").innerHTML =  `Person's first name: ${raj.fname}` + "<br>"
+                                                +  `Person's last name: ${raj.lname}`+ "<br>"
+                                                +  `Person's middle name: ${raj.mname}`;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <p id="demo"></p>
+    <script type="text/javascript">
+    
+    var i;
+    var fib = []; // Initialize array
+
+   fib[0] = 0;
+   fib[1] = 1;
+        for (i = 2; i <= 100; i++) {
+ 
+        fib[i] = fib[i - 2] + fib[i - 1];
+        //   console.log(fib[i]);
+        //   document.write(fib[i]);
+          document.getElementById("demo").innerHTML += fib[i] + " ,\n" ;
+}
+    </script>
+</body>
+</html>

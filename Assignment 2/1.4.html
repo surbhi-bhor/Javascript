@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square and Square Root</title>
+    <style>
+        body{
+            background-color: rgb(168, 168, 117);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Square and Square Root</h1>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    
+
+
+    <script>
+        
+
+        function square(x){
+            return x*x;
+        }
+
+        function squareRoot(x){
+            return Math.sqrt(x);
+        }
+        function map(arr, func){
+            var newArr = new Array();
+            
+            for(var i=0; i<arr.length; i++) {
+                newArr.push(func(arr[i]));
+                }
+                return newArr;
+        }
+
+
+       
+           
+      
+        document.getElementById("result1").innerHTML = "Square of array : <br> " +map([1,2,3,4,5], square);
+        document.getElementById("result2").innerHTML = "Square root of array : <br> " +map([1,4,9,16,25], squareRoot);
+        
+    </script>
+</body>
+</html>

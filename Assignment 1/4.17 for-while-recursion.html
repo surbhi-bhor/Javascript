@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum using loops</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum using loops</h1>
+    <p id="loop"></p>
+    
+
+
+    <script>
+var numberList = [2,5,6,8,4,7,10,20];
+var choice = prompt("Enter choice for/while/rec");
+function IterateList(list, choice){
+  var sum = 0;
+  //forLoop
+  if(choice === "for"){
+    for(var i=0; i<list.length; i++){
+      sum += list[i];
+    }
+  }
+  else if(choice === "while"){
+    //while loop
+    var a = 0;
+    while(a < list.length){
+      sum += list[a];
+      a++;
+    }
+  }
+  else{
+    function add(array){
+      if(array.length === 1){
+        return array[0];
+      }else{
+        return array[array.length-1] + add(array.slice(0,array.length-1));
+      }
+    }
+    sum = add(numberList);
+  }
+
+  return "Sum is : "+sum;
+}
+document.getElementById("loop").innerHTML = IterateList(numberList, choice);
+// document.write(IterateList(numberList, choice));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Latin</title>
+    <style>
+        body{
+            background-color: rgb(209, 204, 197);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pig Latin</h1>
+
+    <p id="demo"></p>
+    <script>
+    function letters(word) {
+        return word.split('')
+    }
+    
+    function pigLatinizeWord(word) {
+        var chars = letters(word);
+        return chars.slice(1).join('') + chars[0] + 'ay';
+    }
+    
+    function pigLatinizeSentence(sentence) {
+        return sentence.replace(/\w+/g, pigLatinizeWord)
+    }
+    
+    
+    document.getElementById("demo").innerHTML =  pigLatinizeSentence("The quick brown fox");
+           
+    
+    </script> 
+</body>
+</html>
